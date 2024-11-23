@@ -20,20 +20,18 @@ Olá pessoal, Venilton da DIO aqui! Inspirado na hype _"Natty or Not"_ do fisicu
 ### Template
 
 ```markdown
-# Título do Projeto Extremamente Aesthetic ;)
+# Artigo: criação de agentes com crewai
 
 ## 📒 Descrição
-Breve descrição do seu projeto
-
+Artigo sobre a biblioteca crewai, o gerador de agentes que realizam diversos trabalhos com ia
 ## 🤖 Tecnologias Utilizadas
-Liste as IAs Generativas e outras ferramentas usadas
-
+Api da openai - utilizada para gerar o artigo
+Crewai - biblioteca do python que cria agentes inteligentes
 ## 🧐 Processo de Criação
-Descreva como você criou o conteúdo
-
+Para criação de qualquer tipo de artigo, desenvolvemos um projeto o qual se escreve o tema e ele gera, em markdown o artigo que você precisa.
 ## 🚀 Resultados
-Apresente os resultados do seu projeto
-
+o arquivo artigo final.md gerado pelo sistema, o qual a pasta do mesmo segue no repositório também.
+O sistema está disponível para quem quiser alterar / utilizar
 ## 💭 Reflexão (Opcional)
 Comente sobre o desafio de criar algo 'natty' com IA.
 ```

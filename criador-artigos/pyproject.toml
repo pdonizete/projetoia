@@ -1,0 +1,60 @@
+[tool.poetry]
+name = "criador-artigos"
+version = "0.1.0"
+description = "esse projeto gera um artigo"
+authors =["paulo filho <paulinhodgf@gmail.com>"]
+readme = "README.md"
+packages = [{include = "criador_artigos"}]
+classifiers = [
+    "Topic :: Education",
+    "Intended Audience :: Developers",
+    "Environment :: Console",
+    "Natural Language :: Portuguese (Brazilian)",
+    "Development Status :: 1 - Planning",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+
+[tool.poetry.urls]
+"Documentação" = "https://github.com/costadiegus/terminal-based-games-builder"
+"Código" = "https://github.com/costadiegus/terminal-based-games-builder"
+"Bug Tracker" = "https://github.com/costadiegus/terminal-based-games-builder/issues"
+
+
+[tool.poetry.dependencies]
+python = ">=3.12,<=3.13"
+crewai = "^0.41.1"
+crewai-tools = "^0.4.26"
+langchain-openai = "^0.1.20"
+pydantic = "^2.8.2"
+langchain-groq = "^0.1.9"
+langchain-google-genai = "^1.0.9"
+google-generativeai = "^0.7.2"
+langchain-ollama = "^0.1.2"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+pytest-cov = "^5.0.0"
+taskipy = "^1.13.0"
+
+
+[tool.poetry.group.doc.dependencies]
+mkdocs-material = "^9.5.31"
+mkdocstrings = "^0.25.2"
+mkdocstrings-python = "^1.10.7"
+mkdocs = "^1.6.0"
+mkdocs-macros-plugin = "^1.0.5"
+jinja2 = "^3.1.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+docs = "mkdocs serve"
+test = "pytest -s -x --cov=terminal_based_games_builder -vv"
+post_test = "coverage html"
+publish = "poetry publish -u __token__ -p $TOKEN"
